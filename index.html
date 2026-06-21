@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calci</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+
+<h1>Calculator</h1>
+
+<div class="tabs">
+<button onclick="showSection('basic')">Basic</button>
+<button onclick="showSection('birthday')">Birthday</button>
+<button onclick="showSection('conversion')">Conversion</button>
+</div>
+
+<div id="basic" class="section">
+
+<input id="display" disabled>
+
+<div class="buttons">
+
+<button onclick="clearDisplay()">C</button>
+<button onclick="appendValue('/')">÷</button>
+<button onclick="appendValue('*')">×</button>
+<button onclick="appendValue('-')">−</button>
+
+<button onclick="appendValue('9')">9</button>
+<button onclick="appendValue('8')">8</button>
+<button onclick="appendValue('7')">7</button>
+<button onclick="appendValue('+')">+</button>
+
+<button onclick="appendValue('6')">6</button>
+<button onclick="appendValue('5')">5</button>
+<button onclick="appendValue('4')">4</button>
+<button onclick="calculate()">=</button>
+
+<button onclick="appendValue('3')">3</button>
+<button onclick="appendValue('2')">2</button>
+<button onclick="appendValue('1')">1</button>
+<button onclick="appendValue('0')">0</button>
+
+</div>
+</div>
+
+<div id="birthday" class="section hidden">
+
+<h2>Birthday Calculator</h2>
+
+<input type="date" id="dob">
+
+<button onclick="calculateAge()">Calculate</button>
+
+<p id="ageResult"></p>
+
+</div>
+
+<div id="conversion" class="section hidden">
+
+<h2>Conversion</h2>
+
+<div id="conversionButtons">
+
+<button onclick="openConversion('mlL')">ML → L</button>
+<button onclick="openConversion('Lml')">L → ML</button>
+<button onclick="openConversion('kmM')">KM → M</button>
+<button onclick="openConversion('Mkm')">M → KM</button>
+<button onclick="openConversion('cmM')">CM → M</button>
+<button onclick="openConversion('cmKm')">CM → KM</button>
+<button onclick="openConversion('cF')">°C → °F</button>
+<button onclick="openConversion('Fc')">°F → °C</button>
+
+</div>
+
+<div id="conversionPage" class="hidden">
+
+<h2 id="conversionTitle"></h2>
+
+<input id="conversionInput" placeholder="Enter value">
+
+<button onclick="doConversion()">Calculate</button>
+
+<p id="conversionResult"></p>
+
+<button onclick="backConversion()">Back</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
